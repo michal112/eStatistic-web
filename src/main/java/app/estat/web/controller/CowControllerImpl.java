@@ -5,7 +5,6 @@ import app.estat.web.model.entity.CowParent;
 import app.estat.web.model.entity.Insemination;
 import app.estat.web.model.entity.Lactation;
 import app.estat.web.model.mapper.EntityMapper;
-import app.estat.web.model.request.CowParentRequest;
 import app.estat.web.model.request.CowRequest;
 import app.estat.web.model.request.InseminationRequest;
 import app.estat.web.model.request.LactationRequest;

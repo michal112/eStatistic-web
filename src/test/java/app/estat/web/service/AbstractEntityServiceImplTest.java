@@ -2,7 +2,7 @@ package app.estat.web.service;
 
 import app.estat.web.Application;
 import app.estat.web.util.Util;
-import app.estat.web.model.entity.Entity;
+import app.estat.web.model.entity.BaseEntity;
 
 import org.junit.After;
 import org.junit.Test;
@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes =  Application.class)
-public abstract class AbstractEntityServiceImplTest<E extends Entity> {
+public abstract class AbstractEntityServiceImplTest<E extends BaseEntity> {
 
     private Class<E> clazz;
 
@@ -52,7 +52,7 @@ public abstract class AbstractEntityServiceImplTest<E extends Entity> {
     @Test
     public void testGetEntity() throws IllegalAccessException, ParseException {
         E savedEntity = entityService.save(getSimpleEntity());
-        assertTrue(savedEntity.getId() != null);
+        assertNotNull(savedEntity.getId());
 
         E readEntity = entityService.get(savedEntity.getId());
         assertTrue(Util.assertPropertiesEquals(savedEntity, readEntity, clazz));

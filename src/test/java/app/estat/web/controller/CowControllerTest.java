@@ -1,6 +1,5 @@
 package app.estat.web.controller;
 
-import app.estat.web.model.entity.*;
 import app.estat.web.model.repository.CowRepository;
 import app.estat.web.model.request.CowRequest;
 import app.estat.web.model.response.CowResponse;

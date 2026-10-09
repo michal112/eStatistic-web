@@ -16,8 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class InseminationServiceImplTest extends AbstractEntityServiceImplTest<Insemination> {
 
@@ -84,7 +83,7 @@ public class InseminationServiceImplTest extends AbstractEntityServiceImplTest<I
         Insemination insemination = entityService.save(getSimpleEntity());
         Cow cow = cowService.save(new Cow());
 
-        assertEquals(null, ((InseminationService) entityService).getInseminationCow(insemination.getId()));
+        assertNull(((InseminationService) entityService).getInseminationCow(insemination.getId()));
 
         ((InseminationService) entityService).setInseminationCow(insemination.getId(), cow.getId());
 
@@ -126,7 +125,7 @@ public class InseminationServiceImplTest extends AbstractEntityServiceImplTest<I
         Insemination insemination = entityService.save(getSimpleEntity());
         Bull bull = bullService.save(new Bull());
 
-        assertEquals(null, ((InseminationService) entityService).getInseminationBull(insemination.getId()));
+        assertNull(((InseminationService) entityService).getInseminationBull(insemination.getId()));
 
         ((InseminationService) entityService).setInseminationBull(insemination.getId(), bull.getId());
 

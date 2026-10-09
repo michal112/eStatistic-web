@@ -1,6 +1,6 @@
 package app.estat.web.service;
 
-import app.estat.web.model.entity.Entity;
+import app.estat.web.model.entity.BaseEntity;
 
 import org.apache.commons.beanutils.BeanUtilsBean;
 
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
-public abstract class AbstractEntityServiceImpl<R extends CrudRepository, E extends Entity>
+public abstract class AbstractEntityServiceImpl<R extends CrudRepository, E extends BaseEntity>
         implements EntityService<E> {
 
     @Autowired

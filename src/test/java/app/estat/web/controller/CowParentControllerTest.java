@@ -1,8 +1,6 @@
 package app.estat.web.controller;
 
 import app.estat.web.model.entity.Cow;
-import app.estat.web.model.repository.CowParentRepository;
-import app.estat.web.model.request.CowParentRequest;
 import app.estat.web.service.CowService;
 
 import org.junit.Test;

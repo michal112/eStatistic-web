@@ -1,6 +1,6 @@
 package app.estat.web.util;
 
-import app.estat.web.model.entity.Entity;
+import app.estat.web.model.entity.BaseEntity;
 
 import app.estat.web.model.response.EntityResponse;
 import app.estat.web.model.response.Response;
@@ -31,8 +31,8 @@ public class Util {
                         return false;
                     }
                 } else if (field.getType().getAnnotatedInterfaces().length > 0 &&
-                        field.getType().getAnnotatedInterfaces()[0].getType().equals(Entity.class)) {
-                    if (!(((Entity) field.get(o1)).getId().equals(((Entity) field.get(o2)).getId()))) {
+                        field.getType().getAnnotatedInterfaces()[0].getType().equals(BaseEntity.class)) {
+                    if (!(((BaseEntity) field.get(o1)).getId().equals(((BaseEntity) field.get(o2)).getId()))) {
                         return false;
                     }
                 } else if (!(field.get(o1).equals(field.get(o2)))) {

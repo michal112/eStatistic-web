@@ -3,9 +3,7 @@ package app.estat.web.controller;
 import app.estat.web.model.entity.Cow;
 import app.estat.web.model.entity.CowParent;
 import app.estat.web.model.mapper.EntityMapper;
-import app.estat.web.model.request.CowParentRequest;
 import app.estat.web.model.request.CowRequest;
-import app.estat.web.model.response.CowParentResponse;
 import app.estat.web.model.response.CowResponse;
 import app.estat.web.model.response.Response;
 import app.estat.web.service.CowParentService;
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController

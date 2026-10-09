@@ -1,6 +1,6 @@
 package app.estat.web.controller;
 
-import app.estat.web.model.entity.Entity;
+import app.estat.web.model.entity.BaseEntity;
 import app.estat.web.model.mapper.EntityMapper;
 import app.estat.web.model.request.EntityRequest;
 import app.estat.web.model.request.Request;
@@ -19,7 +19,7 @@ import javax.annotation.PostConstruct;
 
 import java.util.stream.Collectors;
 
-public abstract class AbstractEntityControllerImpl<E extends Entity, R extends EntityRequest, R1 extends EntityResponse>
+public abstract class AbstractEntityControllerImpl<E extends BaseEntity, R extends EntityRequest, R1 extends EntityResponse>
         implements EntityController<R> {
 
     protected EntityService<E> entityService;

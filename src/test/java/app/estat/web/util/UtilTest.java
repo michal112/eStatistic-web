@@ -8,9 +8,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Date;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 @RunWith(BlockJUnit4ClassRunner.class)
 public class UtilTest {
@@ -52,7 +50,7 @@ public class UtilTest {
         assertTrue(Util.assertPropertiesEquals(firstObject, secondObject, SimpleObject.class));
 
         firstObject = new SimpleObject("STRING", 1L, new Date(time), true);
-        assertTrue(!Util.assertPropertiesEquals(firstObject, secondObject, SimpleObject.class));
+        assertFalse(Util.assertPropertiesEquals(firstObject, secondObject, SimpleObject.class));
     }
 
 }

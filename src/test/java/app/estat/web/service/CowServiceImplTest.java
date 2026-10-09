@@ -17,8 +17,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class CowServiceImplTest extends AbstractEntityServiceImplTest<Cow> {
 
@@ -92,7 +91,7 @@ public class CowServiceImplTest extends AbstractEntityServiceImplTest<Cow> {
         Cow cow = entityService.save(getSimpleEntity());
         CowParent cowParent = cowParentService.save(new CowParent());
 
-        assertEquals(null, ((CowService) entityService).getCowParent(cow.getId()));
+        assertNull(((CowService) entityService).getCowParent(cow.getId()));
 
         ((CowService) entityService).setCowParent(cow.getId(), cowParent.getId());
 

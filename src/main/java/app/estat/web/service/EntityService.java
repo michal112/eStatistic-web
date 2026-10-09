@@ -1,10 +1,10 @@
 package app.estat.web.service;
 
-import app.estat.web.model.entity.Entity;
+import app.estat.web.model.entity.BaseEntity;
 
 import java.util.List;
 
-public interface EntityService<E extends Entity> {
+public interface EntityService<E extends BaseEntity> {
 
     E save(E entity);
     List<E> getAll();

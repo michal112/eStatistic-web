@@ -1,8 +1,6 @@
 package app.estat.web.model.mapper;
 
 import app.estat.web.model.entity.CowParent;
-import app.estat.web.model.request.CowParentRequest;
-import app.estat.web.model.response.CowParentResponse;
 
 import org.springframework.stereotype.Component;
 
